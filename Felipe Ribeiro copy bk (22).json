@@ -1,0 +1,1752 @@
+{
+  "name": "Felipe Ribeiro copy bk",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Hora e Data atual: {{ DateTime.fromISO($now).toFormat(\"HH:mm:ss | dd/MM/yyyy | cccc\", { locale: \"pt-BR\" }) }}\nNome do cliente:{{ $('Dados').item.json.pushName }}\nNúmero whatspp do cliente: {{ $('Dados').item.json.remoteJid }} //\nMensagem do cliente: {{ $json.message }}.",
+        "options": {
+          "systemMessage": "Aqui está o prompt completo para o agente de IA do n8n:\n\n---\n\n**NOME DA ASSISTENTE: MARINA**\n*Assistente Virtual da Sala da Diretora – Eduarda de Paula*\n\n---\n\n## CARGO\n\nVocê é **Marina**, assistente virtual especialista em gestão escolar da **Sala da Diretora**, criada por Eduarda de Paula. Você atua como consultora de apoio para diretoras e donas de escolas infantis que adquiriram o **Kit Matrícula**, auxiliando no uso dos materiais, na organização da gestão escolar e na captação e retenção de alunos.\n\n---\n\n## CONTEXTO\n\nA **Sala da Diretora** é um projeto educacional criado por Eduarda de Paula, voltado para diretoras e gestoras de escolas de educação infantil. O principal produto em questão é o **Kit Matrícula**, um pacote completo de documentos editáveis no Canva que abrange todas as etapas do processo de matrículas escolares: do primeiro contato com as famílias até o pós-matrícula.\n\nO Kit Matrícula é dividido em três grandes frentes:\n\n**1. Atendimento Online:**\n- Kit de Mensagens para comunicação com pais (WhatsApp)\n- Guia do Visitante (enviado antes da visita presencial)\n- Vídeo para Tour Virtual da escola\n\n**2. Atendimento Presencial:**\n- Kit de Matrículas para editar e imprimir (fichas de matrícula, ficha médica, normas, autorização de imagem, orçamento)\n- Portfólio de apresentação da escola\n- Kit de Campanha de Matrículas (panfleto, marca-páginas, revista de colorir)\n\n**3. Pós-Matrícula e Organização:**\n- Lista de Materiais para educação infantil\n- Grade de horários e rotina\n- Manual de adaptação para pais\n- Manual da família\n- Carta de Renovação de matrícula\n- Calendário escolar 2026\n- Kit de declarações para secretaria\n- Modelos de cardápios\n- Jornal da escola\n\nTodos os documentos são **editáveis no Canva** e podem ser personalizados com logo, cores e informações da escola. O suporte oficial é feito por e-mail (saladadiretora@gmail.com) e WhatsApp (31) 9 84866970.\n\n---\n\n## REGRAS\n\n1. **Sempre se apresente como Marina** na primeira mensagem de cada conversa. Nunca se identifique como uma inteligência artificial de outra empresa ou revele que é um robô, a menos que a pessoa pergunte diretamente se você é humana — nesse caso, responda com honestidade e leveza, dizendo que é uma assistente virtual criada para ajudar.\n\n2. **Responda sempre em português do Brasil**, de forma natural, calorosa e acessível, como uma colega experiente que entende o dia a dia de uma escola infantil.\n\n3. **Não invente informações** sobre preços, novos produtos, promoções ou funcionalidades que não estejam descritas no seu contexto. Se não souber responder, direcione para o suporte oficial.\n\n4. **Não faça atendimento financeiro**, como processar pagamentos, emitir notas fiscais ou confirmar compras. Encaminhe sempre ao suporte oficial.\n\n5. **Priorize a resolução no próprio chat.** Só encaminhe ao suporte humano quando a dúvida for técnica complexa, reclamações graves ou quando a pessoa pedir explicitamente.\n\n6. **Respeite o tempo da diretora.** As mensagens devem ser objetivas e úteis. Evite respostas longas demais sem necessidade.\n\n7. **Nunca critique ou diminua a escola da cliente.** Seu papel é ajudar, não julgar.\n\n---\n\n## RESTRIÇÕES\n\n- Não compartilhe links de acesso ao Canva ou links dos documentos do kit — esses links estão no arquivo PDF que a cliente recebeu no momento da compra.\n- Não prometa prazos de resposta do suporte humano que não foram informados no seu contexto.\n- Não trate assuntos fora do escopo da Sala da Diretora (ex.: questões jurídicas trabalhistas, contabilidade, saúde das crianças). Reconheça a dúvida, mas oriente que esse não é o seu campo de atuação.\n- Não utilize linguagem excessivamente técnica ou corporativa. O público são diretoras de escolas infantis — pessoas práticas, ocupadas e apaixonadas pelo que fazem.\n- Não envie mais de uma mensagem longa de uma vez. Prefira blocos curtos e conversacionais.\n\n---\n\n## COMPORTAMENTO\n\nMarina é **calorosa, confiante e prática**. Ela fala como quem já viveu o dia a dia de uma escola e entende as pressões da gestão escolar. Não é robótica nem fria — ela usa expressões naturais, valida as dificuldades da diretora e celebra os avanços.\n\n**Tom de voz:** acolhedor, próximo, animado quando pertinente, mas sempre profissional. Como se fosse uma consultora parceira que você tem no WhatsApp.\n\n**Ritmo:** responde em mensagens curtas e diretas. Não despeja um bloco de texto enorme. Quando precisa dar informações mais completas, divide em etapas ou tópicos curtos.\n\n**Empatia ativa:** sempre que a diretora demonstrar dúvida, cansaço ou frustração, Marina reconhece antes de resolver. Nunca vai direto ao ponto sem antes humanizar a resposta.\n\n**Proatividade:** ao final de respostas relevantes, Marina sempre oferece um próximo passo ou pergunta se a diretora precisa de mais alguma coisa relacionada ao tema.\n\n---\n\n## PROCEDIMENTO\n\n**Ao receber a primeira mensagem:**\n1. Se apresentar como Marina, da Sala da Diretora.\n2. Perguntar o nome da diretora (se não foi informado).\n3. Perguntar em que pode ajudar.\n\n**Ao identificar a dúvida:**\n1. Confirmar o entendimento antes de responder, se a mensagem for ambígua.\n2. Responder de forma direta e prática.\n3. Se a dúvida for sobre como usar um documento específico do kit, explicar o passo a passo de uso e personalização no Canva.\n4. Se a dúvida for sobre estratégia de matrículas, captação ou retenção, oferecer orientações baseadas no conteúdo do kit e nas boas práticas de gestão escolar.\n5. Finalizar com uma pergunta aberta ou sugestão de próximo passo.\n\n**Ao identificar uma reclamação:**\n1. Acolher sem se defender.\n2. Pedir mais detalhes para entender o problema.\n3. Tentar resolver ou encaminhar ao suporte: saladadiretora@gmail.com ou WhatsApp (31) 9 84866970.\n\n**Ao identificar uma dúvida fora do escopo:**\n1. Reconhecer a pergunta.\n2. Explicar brevemente que aquele tema não é o foco da Sala da Diretora.\n3. Sugerir que a diretora busque um especialista adequado.\n\n---\n\n## EXEMPLOS\n\n---\n\n**Exemplo 1 — Primeiro contato**\n\n> **Diretora:** Oi, tudo bem?\n\n**Marina:** Oi! Tudo ótimo, obrigada por perguntar 😊 Eu sou a Marina, assistente da Sala da Diretora — estou aqui pra te ajudar com o Kit Matrícula e tudo que envolve a gestão da sua escola. Com quem eu tenho o prazer de falar?\n\n---\n\n**Exemplo 2 — Dúvida sobre como editar no Canva**\n\n> **Diretora:** Não estou conseguindo trocar o logo nos documentos. O que eu faço?\n\n**Marina:** Ah, isso acontece bastante no começo, fica tranquila! Vou te guiar:\n\n1. Abra o documento no Canva pelo link que está no PDF do Kit.\n2. Clique na imagem do logo que já está no documento.\n3. No menu que aparecer, clique em **\"Substituir\"**.\n4. Faça o upload da imagem do logo da sua escola.\n5. Ajuste o tamanho se precisar, arrastando pelos cantos.\n\nConseguiu encontrar o link no PDF? Se quiser, me conta em qual documento está tentando editar que eu te ajudo com mais detalhes!\n\n---\n\n**Exemplo 3 — Dúvida estratégica sobre matrículas**\n\n> **Diretora:** Estou com dificuldade em converter as visitas em matrículas. Os pais visitam mas não fecham. O que fazer?\n\n**Marina:** Essa é uma das situações mais frustrantes na gestão escolar — e também uma das mais comuns. Boa notícia: tem muito o que fazer!\n\nAlgumas estratégias práticas:\n\n📋 **Durante a visita:** Use o Portfólio de Apresentação do Kit pra estruturar um tour profissional. Ele ajuda a conduzir a conversa e mostrar os diferenciais da escola de forma organizada.\n\n📲 **Após a visita:** Aplique o Kit de Mensagens pro acompanhamento pelo WhatsApp. Um bom follow-up bem cronometrado faz uma diferença enorme na decisão dos pais.\n\n💰 **Na proposta:** Use a Folha de Orçamento do kit pra apresentar os valores de forma clara e valorizada — não como uma planilha fria, mas como parte de uma experiência.\n\nVocê está usando algum desses materiais atualmente? Me conta como está o processo hoje que eu te ajudo a identificar onde pode estar o gargalo!\n\n---\n\n**Exemplo 4 — Reclamação**\n\n> **Diretora:** Comprei o kit e não estou conseguindo acessar nada. Estou muito frustrada.\n\n**Marina:** Poxa, entendo sua frustração — isso é super chato, ainda mais quando você estava animada pra começar a usar!\n\nMe conta: você chegou a receber um PDF por e-mail com os links de acesso aos documentos? É por ele que se acessa tudo no Canva.\n\nSe não recebeu ou está com dificuldade, vou te pedir pra entrar em contato direto com o suporte da Eduarda pra resolver isso rapidinho:\n\n📧 saladadiretora@gmail.com\n📱 WhatsApp: (31) 9 84866970\n\nVocê prefere que eu te ajude a formatar uma mensagem pra enviar pra eles?\n\n---\n\n**Exemplo 5 — Pergunta fora do escopo**\n\n> **Diretora:** Você pode me ajudar a fazer o contrato de trabalho das minhas professoras?\n\n**Marina:** Que bom que você está pensando nisso — contratos bem feitos protegem tanto a escola quanto os colaboradores!\n\nEsse é um assunto que exige um olhar jurídico especializado, e não está no meu campo de atuação aqui na Sala da Diretora. Te recomendo conversar com um advogado trabalhista de confiança pra isso.\n\nO que posso te ajudar é na parte da comunicação com as famílias, organização dos documentos de matrícula, estratégias de gestão e tudo relacionado ao Kit! Tem algo nessa área que posso te ajudar agora?\n\n---"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "7802ed0a-9ecd-4dc5-8b19-f4000644f051",
+      "name": "AI Agent",
+      "alwaysOutputData": false,
+      "executeOnce": false,
+      "retryOnFail": false,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Dados').item.json.Instance }} {{ $('Dados').item.json.remoteJid }}",
+        "contextWindowLength": 4
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+      "typeVersion": 1.5,
+      "position": [
+        -304,
+        112
+      ],
+      "id": "14eae367-1e0c-4675-9824-09e8e26b2d7f",
+      "name": "Redis Chat Memory"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "50efcfdb-bf40-4c3e-8cea-f145edbb69dd",
+              "leftValue": "={{ $('Dados').item.json.fromMe }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -576,
+        432
+      ],
+      "id": "7a686243-7c6d-4cfa-9cdd-3b7349b8aaa5",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "set",
+        "key": "={{ $('Dados').item.json.Instance }} {{ $('Dados').item.json.remoteJid }} block",
+        "value": "true",
+        "expire": true,
+        "ttl": 300
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        -464,
+        304
+      ],
+      "id": "8dee6441-f016-4e16-af8d-5eb715a5b687",
+      "name": "chave block"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "messages": {
+          "messageValues": [
+            {
+              "type": "ai",
+              "message": "={{ $('Message').item.json.message }}"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryManager",
+      "typeVersion": 1.1,
+      "position": [
+        -304,
+        304
+      ],
+      "id": "8d8b631f-7467-49c7-a2ec-6cdf2fa08e42",
+      "name": "Chat Memory Manager",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "propertyName": "isBlocked",
+        "key": "={{ $('Dados').item.json.Instance }} {{ $('Dados').item.json.remoteJid }} block",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        -464,
+        592
+      ],
+      "id": "b30d9d9a-f959-4952-9295-a81493f39e81",
+      "name": "Redis"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "ff65b67a-d505-4db7-bb1f-4de07ab14e70",
+              "leftValue": "={{ $json.isBlocked }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -320,
+        592
+      ],
+      "id": "cec21143-b032-4b3d-b519-5676742cae7d",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "messages": {
+          "messageValues": [
+            {
+              "type": "user",
+              "message": "={{ $('Message').item.json.message }}"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryManager",
+      "typeVersion": 1.1,
+      "position": [
+        -304,
+        448
+      ],
+      "id": "c21002b1-3fa9-4c1a-ac5c-21f0b320deff",
+      "name": "Chat Memory  cliente"
+    },
+    {
+      "parameters": {
+        "operation": "push",
+        "list": "={{ $('Dados').item.json.Instance }} {{ $('Dados').item.json.remoteJid }} Temp",
+        "messageData": "={{ $('Message').item.json.message }}",
+        "tail": true
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        -144,
+        608
+      ],
+      "id": "0fc19187-768f-4742-9df8-9c569f547fd5",
+      "name": "Redis1"
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        16,
+        608
+      ],
+      "id": "af39a9cf-ce53-4644-8da0-9f3b7852ae29",
+      "name": "Wait",
+      "webhookId": "dd6a9c40-d59c-4b1f-bbbe-727c97137414"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "propertyName": "messagens",
+        "key": "={{ $('Dados').item.json.Instance }} {{ $('Dados').item.json.remoteJid }} Temp",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        144,
+        608
+      ],
+      "id": "15f1bafb-41e7-4588-818f-55d62303b439",
+      "name": "Redis2"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8e512154-1ae4-466f-ba0a-79f3daf9f362",
+              "leftValue": "={{ $json.messagens.last () }}",
+              "rightValue": "={{ $('Message').item.json.message }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        288,
+        608
+      ],
+      "id": "89d41ab6-8b8d-403a-b734-ac835b0cb659",
+      "name": "If2"
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "key": "={{ $('Dados').item.json.Instance }} {{ $('Dados').item.json.remoteJid }} Temp"
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        48,
+        384
+      ],
+      "id": "6c7c8fd1-fe83-4fc4-98a7-97171f03e670",
+      "name": "Redis3"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b2a0f108-2aea-479f-8fbd-8b5fbe48d277",
+              "name": "message",
+              "value": "={{ $('Redis2').item.json.messagens.join(\" \") }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        384
+      ],
+      "id": "f98f0f81-b9c1-4711-ade4-c8fc59db2cfe",
+      "name": "Message Final"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        384,
+        112
+      ],
+      "id": "434b55f4-928d-4587-b22a-eb55bc1543d7",
+      "name": "Calculator"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.redisTool",
+      "typeVersion": 1,
+      "position": [
+        256,
+        112
+      ],
+      "id": "babf43b0-ab11-4844-ad77-8d74146a0c0d",
+      "name": "Redis4"
+    },
+    {
+      "parameters": {
+        "batchSize": 50,
+        "options": {
+          "reset": false
+        }
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        720,
+        0
+      ],
+      "id": "e999a3c1-f3d8-4087-a59f-8020bdaceca4",
+      "name": "Loop Over Items1"
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "data.base64",
+        "options": {
+          "mimeType": "audio/mpeg"
+        }
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        -1408,
+        320
+      ],
+      "id": "48d1513b-f553-413d-84bc-79da2a1c302b",
+      "name": "Convert to File2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/audio/transcriptions",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "groqApi",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "whisper-large-v3-turbo"
+            },
+            {
+              "name": "temperature",
+              "value": "0"
+            },
+            {
+              "name": "response_format",
+              "value": "verbose_json"
+            },
+            {
+              "name": "language",
+              "value": "pt"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -960,
+        320
+      ],
+      "id": "ba276d3f-0533-456f-a9be-ff2a04f032f6",
+      "name": "Transcrição do áudio1",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ae8acff8-1180-40c9-a9c9-48f97fbde5bd",
+              "name": "conversation",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -800,
+        304
+      ],
+      "id": "bf069e48-8c9e-4462-80b1-71185995623a",
+      "name": "Message transcrita1"
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "data.base64",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        -1408,
+        512
+      ],
+      "id": "2ff36f76-41bb-412e-a518-1e4b7d6ecde7",
+      "name": "Convert to File3"
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "operation": "analyze",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-2.5-flash"
+        },
+        "text": "Descreva e transcreva a imagem ",
+        "inputType": "=data",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        -1056,
+        512
+      ],
+      "id": "669eef21-580f-4267-945f-919c915dd9f0",
+      "name": "Analyze image1",
+      "retryOnFail": false,
+      "waitBetweenTries": 5000,
+      "notesInFlow": false,
+      "credentials": {
+        "googlePalmApi": {
+          "id": "xqJch8firqqFcSTa",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ae8acff8-1180-40c9-a9c9-48f97fbde5bd",
+              "name": "conversation",
+              "value": "=Transcrição da imagem enviado pelo usuário:{{ $json.content.parts[0].text }} Texto enviado com a imagem: {{ $('Obter m dia em base65').item.json.data.caption }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -800,
+        592
+      ],
+      "id": "a9184188-1411-4240-8276-16b69255c2f2",
+      "name": "Message transcrita2"
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "data.base64",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        -1408,
+        688
+      ],
+      "id": "41b2cf17-4590-41bf-aa51-866cb7021a52",
+      "name": "Convert to File4"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ae8acff8-1180-40c9-a9c9-48f97fbde5bd",
+              "name": "conversation",
+              "value": "=Transcrição da imagem enviado pelo usuário:{{ $json.content.parts[0].text }} Texto enviado com a imagem: {{ $('Obter m dia em base66').item.json.data.caption }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1008,
+        736
+      ],
+      "id": "0ba4f34b-4b43-4640-8329-b6119d146285",
+      "name": "Message transcrita3"
+    },
+    {
+      "parameters": {
+        "resource": "document",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-2.5-flash"
+        },
+        "text": "transcreva o documento",
+        "inputType": "binary",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        688
+      ],
+      "id": "e907cac2-c021-4371-ad5e-bb92d9a16b46",
+      "name": "Analyze document",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "xqJch8firqqFcSTa",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "72dbf502-89d6-4369-af1b-f8cab9daf1e1",
+              "name": "message",
+              "value": "={{ $json.conversation }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -816,
+        432
+      ],
+      "id": "59d173c2-d9ef-4b06-bbb3-c65a2a3bcaec",
+      "name": "Message"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ecac0153-8c4a-45c7-8e21-14a2676d0f21",
+              "name": "Instance",
+              "value": "={{ $('Webhook').item.json.body.instance }}",
+              "type": "string"
+            },
+            {
+              "id": "a373efa4-dff9-4bba-88f1-fafe8c4f917b",
+              "name": "remoteJid",
+              "value": "={{ ($json.body.data.key.senderPn || $json.body.data.key.remoteJid).replaceAll('@s.whatsapp.net', '') }}",
+              "type": "string"
+            },
+            {
+              "id": "941f91fc-e9e3-4dd0-b7d8-43cf5894da3f",
+              "name": "id",
+              "value": "={{ $('Webhook').item.json.body.data.key.id }}",
+              "type": "string"
+            },
+            {
+              "id": "ffb704b9-8994-4973-89f1-d2d3369acc3c",
+              "name": "fromMe",
+              "value": "={{ $('Webhook').item.json.body.data.key.fromMe }}",
+              "type": "string"
+            },
+            {
+              "id": "08c56cd4-3e4a-4275-9787-f5fa45836d55",
+              "name": "conversation",
+              "value": "={{ $('Webhook').item.json.body.data.message.conversation }}",
+              "type": "string"
+            },
+            {
+              "id": "0a7f81c3-8c83-4eed-8061-4f9e52957ddb",
+              "name": "messageType",
+              "value": "={{ $('Webhook').item.json.body.data.messageType }}",
+              "type": "string"
+            },
+            {
+              "id": "445b9bad-18b5-44a1-96c0-764fe6b2cd53",
+              "name": "pushName",
+              "value": "={{ $('Webhook').item.json.body.data.pushName }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2112,
+        432
+      ],
+      "id": "e12f328c-2247-4ffb-b780-aa0235da64f1",
+      "name": "Dados"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolThink",
+      "typeVersion": 1.1,
+      "position": [
+        496,
+        112
+      ],
+      "id": "33d77e3c-2229-44d5-b099-21a5d7977498",
+      "name": "Think"
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "data.base64",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        -1616,
+        144
+      ],
+      "id": "ad4a689f-0b56-46aa-813f-b00cc71abcaa",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ae8acff8-1180-40c9-a9c9-48f97fbde5bd",
+              "name": "conversation",
+              "value": "=Transcrição do vídeo enviado pelo usuário:{{ $json.content.parts[0].text }} Texto enviado com o vídeo: {{ $('Obter m dia em base64').item.json.data.caption }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1008,
+        128
+      ],
+      "id": "adec19f0-60a8-4463-b89f-79e9eb7498eb",
+      "name": "Message transcrita"
+    },
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "analyze",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-3-flash-preview",
+          "mode": "list",
+          "cachedResultName": "models/gemini-3-flash-preview"
+        },
+        "text": "Descreva e transcreva o vídeo detalhadamente em texto ",
+        "inputType": "binary",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        -1264,
+        144
+      ],
+      "id": "03612c91-977e-42ce-b8c8-a6c45020973e",
+      "name": "Analyze video",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "xqJch8firqqFcSTa",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "a206033c-3160-4e41-89c8-152a23b6cf17",
+                    "leftValue": "={{ $json.messageType }}",
+                    "rightValue": "videoMessage",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Vídeo"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "dc38b0f5-c4ca-4269-8749-41416c9c7019",
+                    "leftValue": "={{ $json.messageType }}",
+                    "rightValue": "audioMessage",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Audio"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.messageType }}",
+                    "rightValue": "conversation",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "f0da718c-5f2d-49e9-8d3b-8f5ea8260ed0"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Texto"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "fe2c441b-b958-446b-8430-25224d5cf812",
+                    "leftValue": "={{ $json.messageType }}",
+                    "rightValue": "imageMessage",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Imagem"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "1c168a89-ec8a-48ae-9215-33e78adf1be9",
+                    "leftValue": "={{ $json.messageType }}",
+                    "rightValue": "=documentMessage",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PDF"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -1728,
+        384
+      ],
+      "id": "989a6acc-4002-47c3-acce-e6f2046d017e",
+      "name": "Switch1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// n8n Code node (JavaScript) - Run Once for All Items\nfunction pickText(obj) {\n  if (!obj || typeof obj !== \"object\") return \"\";\n  const candidates = [\"output\", \"text\", \"response\", \"message\", \"content\"];\n  for (const k of candidates) {\n    if (typeof obj[k] === \"string\" && obj[k].trim()) return obj[k];\n  }\n  for (const v of Object.values(obj)) {\n    if (typeof v === \"string\" && v.trim()) return v;\n  }\n  return \"\";\n}\n\nlet mensagemRaw = \"\";\ntry { mensagemRaw = pickText($input.first()?.json) || \"\"; } catch (e) {}\nif (!mensagemRaw) {\n  try { mensagemRaw = pickText($(\"AI Agent\").first()?.json) || \"\"; } catch (e) {}\n}\n\nlet mensagem = String(mensagemRaw).replace(/\\r\\n/g, \"\\n\").replace(/\\u00A0/g, \" \").trim();\n\nif (!mensagem) {\n  mensagem = \"Oi! Tive um pequeno problema técnico aqui e a minha resposta falhou. Você poderia repetir a pergunta de outra forma, por favor?\";\n}\n\nconst isLikelyGreeting = (txt) => /^(oi|olá|ola|boa\\s*(tarde|noite|dia)|hey|e?a[ií]|tudo bem)/i.test((txt ?? \"\").trim());\nconst isLikelySignatureHead = (line) => /^(atenciosamente|com\\s+carinho|abraços|abracos|obrigad[oa]|grato|grata|cordialmente|respeitosamente|att\\.?)\\b/i.test((line ?? \"\").trim());\nconst hasOnlyShortLines = (block) => {\n  const lines = (block ?? \"\").split(\"\\n\").map((l) => l.trim()).filter(Boolean);\n  if (lines.length === 0) return false;\n  const avgLen = lines.reduce((a, b) => a + b.length, 0) / lines.length;\n  return avgLen <= 28 && lines.every((l) => l.length <= 50);\n};\n\nconst sentenceSplit = (paragraph) => {\n  const p = (paragraph ?? \"\").trim();\n  if (!p) return [];\n  if (hasOnlyShortLines(p)) return [p];\n  const parts = p.match(/[^.!?]+(?:[.!?]+[\"”']?)(?=\\s+|$)|[^.!?]+$/g) || [p];\n  const ABBR = /(?:\\b(Sr|Sra|Srta|Dr|Dra|Prof|Profa|vs|p|ex|etc|aprox|pg|fig|cap)\\.)$/i;\n  const fixed = [];\n  for (const curRaw of parts) {\n    const cur = (curRaw ?? \"\").trim();\n    if (!cur) continue;\n    if (fixed.length > 0) {\n      const prev = fixed[fixed.length - 1].trim();\n      if (ABBR.test(prev)) {\n        fixed[fixed.length - 1] = `${prev} ${cur}`.trim();\n        continue;\n      }\n    }\n    fixed.push(cur);\n  }\n  return fixed;\n};\n\nconst groupSentences = (sentences, maxChars = 400, maxPerGroup = 3) => {\n  const groups = [];\n  let buf = \"\";\n  let countInGroup = 0;\n  const flush = () => {\n    if (buf.trim()) groups.push(buf.trim());\n    buf = \"\";\n    countInGroup = 0;\n  };\n  const isUrlOrEmailOnly = (s) => /^(https?:\\/\\/\\S+|www\\.\\S+|[\\w.+-]+@[\\w.-]+\\.[a-zA-Z]{2,})$/i.test((s ?? \"\").trim());\n  for (const sRaw of sentences) {\n    const s = (sRaw ?? \"\").trim();\n    if (!s) continue;\n    const tentative = buf ? `${buf} ${s}` : s;\n    const exceeds = tentative.length > maxChars;\n    const tooMany = countInGroup + 1 > maxPerGroup;\n    const isolate = isUrlOrEmailOnly(s);\n    if ((exceeds || tooMany || isolate) && buf) flush();\n    buf = buf ? `${buf} ${s}` : s;\n    countInGroup++;\n    if (buf.length >= maxChars * 0.9) flush();\n  }\n  flush();\n  return groups;\n};\n\nlet blocks = mensagem.split(/\\n{2,}/).map((b) => b.trim()).filter(Boolean);\nif (blocks.length >= 1) {\n  const last = blocks[blocks.length - 1];\n  const firstLine = last.split(\"\\n\")[0] ?? \"\";\n  if (isLikelySignatureHead(firstLine) || hasOnlyShortLines(last)) {}\n}\nif (blocks.length >= 1) {\n  const first = blocks[0];\n  const firstLine = first.split(\"\\n\")[0] ?? \"\";\n  if (isLikelyGreeting(firstLine) && first.length <= 220) {}\n}\n\nconst finalBlocks = [];\nfor (let i = 0; i < blocks.length; i++) {\n  const b = blocks[i];\n  const firstLine = b.split(\"\\n\")[0] ?? \"\";\n  const looksLikeSignature = isLikelySignatureHead(firstLine) || (i === blocks.length - 1 && hasOnlyShortLines(b));\n  if (looksLikeSignature) { finalBlocks.push(b); continue; }\n  if (b.length <= 500 && b.includes(\"\\n\")) { finalBlocks.push(b); continue; }\n  if (b.length <= 420) { finalBlocks.push(b); continue; }\n  const sentences = sentenceSplit(b);\n  const grouped = groupSentences(sentences, 400, 3);\n  finalBlocks.push(...grouped);\n}\n\nlet remoteJid = \"\";\nlet instance = \"\";\ntry {\n  remoteJid = $(\"Dados\").first().json.remoteJid;\n  instance = $(\"Dados\").first().json.Instance;\n} catch(e) {}\n\nconst outputs = finalBlocks\n  .map((s) => s.replace(/[ \\t]+\\n/g, \"\\n\").trim())\n  .filter(Boolean)\n  .map((s) => ({ json: { output: s, remoteJid: remoteJid, Instance: instance } }));\n\nreturn outputs.length ? outputs : [{ json: { output: mensagem, remoteJid: remoteJid, Instance: instance } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        560,
+        0
+      ],
+      "id": "27f06b9c-02f8-4d33-b8ad-70b3f50b3169",
+      "name": "Quebra"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "781984b2-4501-4262-b0e7-c725b46221c9",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -2736,
+        448
+      ],
+      "id": "b8494018-6bcb-4f07-b076-6745bbc21963",
+      "name": "Webhook",
+      "webhookId": "781984b2-4501-4262-b0e7-c725b46221c9"
+    },
+    {
+      "parameters": {
+        "resource": "chat-api",
+        "operation": "get-media-base64",
+        "instanceName": "={{ $json.Instance }}",
+        "messageId": "={{ $json.id }}"
+      },
+      "type": "n8n-nodes-evolution-api.evolutionApi",
+      "typeVersion": 1,
+      "position": [
+        -1568,
+        144
+      ],
+      "id": "a1b61f73-660b-4eda-85a5-c239ce67cf49",
+      "name": "Obter m dia em base64",
+      "credentials": {
+        "evolutionApi": {
+          "id": "cxM3xHcBg06jWqd8",
+          "name": "Evolution account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "chat-api",
+        "operation": "get-media-base64",
+        "instanceName": "={{ $json.Instance }}",
+        "messageId": "={{ $json.id }}"
+      },
+      "type": "n8n-nodes-evolution-api.evolutionApi",
+      "typeVersion": 1,
+      "position": [
+        -1552,
+        320
+      ],
+      "id": "05d8d4c7-cd88-42a4-a769-c880173edecf",
+      "name": "Obter m dia em base",
+      "credentials": {
+        "evolutionApi": {
+          "id": "cxM3xHcBg06jWqd8",
+          "name": "Evolution account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "chat-api",
+        "operation": "get-media-base64",
+        "instanceName": "={{ $json.Instance }}",
+        "messageId": "={{ $json.id }}"
+      },
+      "type": "n8n-nodes-evolution-api.evolutionApi",
+      "typeVersion": 1,
+      "position": [
+        -1568,
+        512
+      ],
+      "id": "72e028a1-8239-45e0-a961-d240172a5bbc",
+      "name": "Obter m dia em base65",
+      "credentials": {
+        "evolutionApi": {
+          "id": "cxM3xHcBg06jWqd8",
+          "name": "Evolution account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "chat-api",
+        "operation": "get-media-base64",
+        "instanceName": "={{ $json.Instance }}",
+        "messageId": "={{ $json.id }}"
+      },
+      "type": "n8n-nodes-evolution-api.evolutionApi",
+      "typeVersion": 1,
+      "position": [
+        -1568,
+        688
+      ],
+      "id": "b95baea0-ee9e-40d7-8be0-5db9ce0d724f",
+      "name": "Obter m dia em base66",
+      "credentials": {
+        "evolutionApi": {
+          "id": "cxM3xHcBg06jWqd8",
+          "name": "Evolution account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "messages-api",
+        "instanceName": "={{ $json.Instance }}",
+        "remoteJid": "={{ $json.remoteJid }}",
+        "messageText": "={{ $json.output }}",
+        "options_message": {}
+      },
+      "type": "n8n-nodes-evolution-api.evolutionApi",
+      "typeVersion": 1,
+      "position": [
+        1072,
+        144
+      ],
+      "id": "1befb88e-44f7-4774-b899-5ff1c7c547b1",
+      "name": "Enviar texto",
+      "credentials": {
+        "evolutionApi": {
+          "id": "cxM3xHcBg06jWqd8",
+          "name": "Evolution account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        0,
+        224
+      ],
+      "id": "c6da4e7f-5a7d-4910-9cbd-d2fe56f98bdc",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "kwznpf1RpSjinyUa",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "chat-api",
+        "operation": "send-presence",
+        "instanceName": "={{ $('Dados').item.json.Instance }}",
+        "remoteJid": "={{ $('Dados').item.json.remoteJid }}"
+      },
+      "type": "n8n-nodes-evolution-api.evolutionApi",
+      "typeVersion": 1,
+      "position": [
+        416,
+        384
+      ],
+      "id": "4fa5a708-fdec-4437-82f3-023e2a0a3301",
+      "name": "Enviar presen a",
+      "credentials": {
+        "evolutionApi": {
+          "id": "cxM3xHcBg06jWqd8",
+          "name": "Evolution account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d1c8ce78-df17-41c0-bc5c-acf05bcc482e",
+              "name": "conversation",
+              "value": "Oi! Tive um pequeno problema técnico para ler essa mídia. Você poderia me explicar em texto?",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -624,
+        160
+      ],
+      "id": "90e278e9-12e2-4a6b-b705-c03d1337e7a5",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1200,
+        320
+      ],
+      "id": "955ca24a-89e8-4a98-b943-2ec7dab447ba",
+      "name": "Wait1",
+      "webhookId": "3e3f1038-6d24-46d7-924d-d595a062dcc0"
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1408,
+        144
+      ],
+      "id": "e3ca1344-86aa-45cd-a6b0-ece6a303708d",
+      "name": "Wait2",
+      "webhookId": "3e3f1038-6d24-46d7-924d-d595a062dcc0"
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1200,
+        512
+      ],
+      "id": "8d92c75a-9812-4470-a115-5306b623a9bf",
+      "name": "Wait3",
+      "webhookId": "3e3f1038-6d24-46d7-924d-d595a062dcc0"
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1200,
+        688
+      ],
+      "id": "b3250acc-92d9-495f-81c1-bb30c5ef7c47",
+      "name": "Wait4",
+      "webhookId": "3e3f1038-6d24-46d7-924d-d595a062dcc0"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "227c036a-e608-408c-8f6e-9e2c9c616b37",
+              "leftValue": "={{ $json.body.event }}",
+              "rightValue": "messages.upsert",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -2448,
+        448
+      ],
+      "id": "120c6184-2d17-4179-b21d-46734a9aabfa",
+      "name": "If3"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Redis Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "Chat Memory Manager",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "Chat Memory  cliente",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Quebra",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "chave block",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Redis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "chave block": {
+      "main": [
+        [
+          {
+            "node": "Chat Memory Manager",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Chat Memory  cliente",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Redis1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis1": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Redis2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis2": {
+      "main": [
+        [
+          {
+            "node": "If2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "Redis3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis3": {
+      "main": [
+        [
+          {
+            "node": "Message Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message Final": {
+      "main": [
+        [
+          {
+            "node": "Enviar presen a",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis4": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File2": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transcrição do áudio1": {
+      "main": [
+        [
+          {
+            "node": "Message transcrita1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message transcrita1": {
+      "main": [
+        [
+          {
+            "node": "Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File3": {
+      "main": [
+        [
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze image1": {
+      "main": [
+        [
+          {
+            "node": "Message transcrita2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message transcrita2": {
+      "main": [
+        [
+          {
+            "node": "Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File4": {
+      "main": [
+        [
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message transcrita3": {
+      "main": [
+        [
+          {
+            "node": "Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze document": {
+      "main": [
+        [
+          {
+            "node": "Message transcrita3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dados": {
+      "main": [
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Think": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze video": {
+      "main": [
+        [
+          {
+            "node": "Message transcrita",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "Obter m dia em base64",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Obter m dia em base",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Obter m dia em base65",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Obter m dia em base66",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message transcrita": {
+      "main": [
+        [
+          {
+            "node": "Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Enviar texto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quebra": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "If3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Obter m dia em base65": {
+      "main": [
+        [
+          {
+            "node": "Convert to File3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Obter m dia em base66": {
+      "main": [
+        [
+          {
+            "node": "Convert to File4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Obter m dia em base": {
+      "main": [
+        [
+          {
+            "node": "Convert to File2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar texto": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar presen a": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Transcrição do áudio1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "Analyze video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "node": "Analyze image1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait4": {
+      "main": [
+        [
+          {
+            "node": "Analyze document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If3": {
+      "main": [
+        [
+          {
+            "node": "Dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "f87a489a-4c0e-4848-be06-67ff97236a8d",
+  "meta": {
+    "instanceId": "72b04f50f247a67ef051d990aa405745da9a58c233dc7e9d7bc5ded68d5b2341"
+  },
+  "id": "tKyZDuarKvEOMFMj",
+  "tags": []
+}
